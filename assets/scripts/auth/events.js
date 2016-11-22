@@ -1,11 +1,13 @@
 'use strict';
 
 const getFormFields = require('../../../lib/get-form-fields');
+const api = require('./api.js');
+const ui = require('./ui.js');
 
 const onSignUp = function(e){
  e.preventDefault();
  let data = getFormFields(this);
- // api.signUp(data).then(ui.success).catch(ui.failure);
+ api.signUp(data).then(ui.success).catch(ui.failure);
  $('#sign-up-modal').modal('hide');
 };
 

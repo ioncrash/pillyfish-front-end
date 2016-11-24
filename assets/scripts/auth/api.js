@@ -1,7 +1,7 @@
 'use strict';
 
 const app = require('../app.js');
-// const store = require('../store.js');
+const store = require('../store.js');
 
 const signUp = function(data) {
 return $.ajax({
@@ -19,17 +19,17 @@ const signIn = function(data) {
     data,
   });
 };
-//
-// const changePassword = function(data) {
-//     return $.ajax({
-//       url: app.host + 'change-password/' + store.player_o.user.id,
-//       method: 'PATCH',
-//       data,
-//       headers: {
-//         Authorization: 'Token token=' + store.player_o.user.token,
-//       },
-//     });
-//   };
+
+const changePassword = function(data) {
+    return $.ajax({
+      url: app.host + 'change-password/' + store.user.id,
+      method: 'PATCH',
+      data,
+      headers: {
+        Authorization: 'Token token=' + store.user.token,
+      },
+    });
+  };
 //
 // const signOut = function() {
 //   return $.ajax({
@@ -44,6 +44,6 @@ const signIn = function(data) {
 module.exports = {
 signUp,
 signIn,
-// changePassword,
+changePassword,
 // signOut
 };

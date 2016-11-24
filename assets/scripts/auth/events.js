@@ -18,14 +18,14 @@ const onSignIn = function(e){
 
 };
 
-// const onChangePassword = function(e){
-// e.preventDefault();
-//   let data = getFormFields(this);
-//   // api.changePassword(data)
-//   //   .then(ui.success)
-//   //   .catch(ui.failure);
-//   $('#change-password-modal').modal('hide');
-// };
+const onChangePassword = function(e){
+e.preventDefault();
+  let data = getFormFields(this);
+  api.changePassword(data)
+    .then(ui.success)
+    .catch(ui.failure);
+  $('#change-password-modal').modal('hide');
+};
 //
 // const onSignOut = function(e){
 //   e.preventDefault();
@@ -39,7 +39,7 @@ const onSignIn = function(e){
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
-  // $('.change-password-form').on('submit', onChangePassword);
+  $('.change-password-form').on('submit', onChangePassword);
   // $('#sign-out-button').on('click', onSignOut);
 };
 

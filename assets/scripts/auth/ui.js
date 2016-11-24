@@ -8,9 +8,7 @@ const success = (data) => {
 
 const signInSuccess = (data) => {
     // save user token
-    store.user = {
-      user: data
-    };
+    store.user = data.user;
     // change dropdown buttons
     $('.sign-in-btn').hide();
     $('.sign-up-btn').hide();

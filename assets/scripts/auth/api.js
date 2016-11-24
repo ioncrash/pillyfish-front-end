@@ -12,13 +12,13 @@ return $.ajax({
 });
 };
 
-// const signIn = function(data) {
-//   return $.ajax({
-//     url: app.host + 'sign-in',
-//     method: 'POST',
-//     data,
-//   });
-// };
+const signIn = function(data) {
+  return $.ajax({
+    url: app.host + 'sign-in',
+    method: 'POST',
+    data,
+  });
+};
 //
 // const changePassword = function(data) {
 //     return $.ajax({
@@ -43,7 +43,7 @@ return $.ajax({
 
 module.exports = {
 signUp,
-// signIn,
+signIn,
 // changePassword,
 // signOut
 };

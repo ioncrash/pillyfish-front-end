@@ -18,17 +18,23 @@ const signInSuccess = (data) => {
     $('#sign-out-btn').removeClass('hidden');
     $('.change-pw-btn').show();
     $('#sign-out-btn').show();
-
+    $('#sign-in-modal').modal('hide');
     success(data);
 };
 
 const failure = (error) => {
-  $('#messages').text('fail');
+  $('#messages').text(error);
+  console.error(error);
+};
+
+const signInFailure = (error) => {
+  $('.modal-title').text('Sign-in -- email or password incorrect');
   console.error(error);
 };
 
 module.exports = {
   failure,
   success,
-  signInSuccess
+  signInSuccess,
+  signInFailure
 };

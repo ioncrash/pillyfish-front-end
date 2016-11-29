@@ -1,10 +1,9 @@
 'use strict';
 
-// const showBooksTemplate = require('../templates/book-listing.handlebars');
+const indexMedsTemplate = require('../templates/index-meds.handlebars');
 
 const indexMedsSuccess = (meds) => {
-  // $('#content').html(showBooksTemplate(books));
-  console.log('in indexMedsSuccess');
+  $('.meds-table').html(indexMedsTemplate(meds));
 };
 
 // const clearBooks = () => {

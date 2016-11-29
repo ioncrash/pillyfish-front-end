@@ -13,6 +13,18 @@ let index = function(){
   });
 };
 
+const create = function(data) {
+  return $.ajax({
+    url: app.host + 'meds',
+    method: 'POST',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    },
+  });
+};
+
 module.exports = {
   index,
+  create
 };

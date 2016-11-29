@@ -20,7 +20,7 @@ const onSignIn = function(e){
 };
 
 const onChangePassword = function(e){
-e.preventDefault();
+  e.preventDefault();
   let data = getFormFields(this);
   api.changePassword(data)
     .then(ui.changePasswordSuccess)

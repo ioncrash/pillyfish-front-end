@@ -20,8 +20,15 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
             <ul class="nav navbar-nav navbar-right" id="navbar-right-side">
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign up/Sign in <span class="caret"></span></a>
+              <li class="meds-dropdown dropdown hidden">
+                <a href="#" class="meds-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Meds<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <!-- launch modal -->
+                  <li><a ><button type="button" class="btn btn-primary btn-lg" id="show-meds-btn">Show meds!</button></a></li>
+                </ul>
+              </li>
+              <li class="auth-dropdown dropdown">
+                <a href="#" class="auth-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign up/Sign in <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <!-- launch modal -->
                   <li><a ><button type="button" class="btn sign-up-btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
@@ -43,10 +50,6 @@
         <!-- add board -->
       <div class="container">
         <table class="meds-table hidden">
-          <tr><th>Id</th>     <th>Name</th>      <th>Email address</th></tr>
-          <tr><td>100001</td> <td>Joe</td>       <td>MamiePVillalobos@teleworm.us</td></tr>
-          <tr><td>100</td>    <td>Christine</td> <td>ChristineJWilliams@dayrep.com</td></tr>
-          <tr><td>1001</td>   <td>John</td>      <td>JohnLMiley@dayrep.com</td></tr>
         </table>
       </div>
 

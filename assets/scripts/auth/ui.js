@@ -12,9 +12,11 @@ const signInSuccess = (data) => {
     // change dropdown buttons
     $('.sign-in-btn').hide();
     $('.sign-up-btn').hide();
-    $('.dropdown-toggle').text(store.user.email);
+    $('.auth-dropdown-toggle').text(store.user.email);
     $('.change-pw-btn').removeClass('hidden');
     $('#sign-out-btn').removeClass('hidden');
+    $('.meds-dropdown').removeClass('hidden');
+    $('.meds-dropdown').show();
     $('.change-pw-btn').show();
     $('#sign-out-btn').show();
     $('#sign-in-modal').modal('hide');

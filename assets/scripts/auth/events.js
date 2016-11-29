@@ -16,7 +16,7 @@ const onSignIn = function(e){
   e.preventDefault();
   let data = getFormFields(this);
   api.signIn(data).then(ui.signInSuccess).catch(ui.signInFailure);
-  meds.indexMeds();
+  // meds.indexMeds();
 };
 
 const onChangePassword = function(e){

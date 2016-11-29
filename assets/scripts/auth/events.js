@@ -3,6 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
+const meds = require('../meds/events.js')
 
 const onSignUp = function(e){
  e.preventDefault();
@@ -15,6 +16,7 @@ const onSignIn = function(e){
   e.preventDefault();
   let data = getFormFields(this);
   api.signIn(data).then(ui.signInSuccess).catch(ui.signInFailure);
+  meds.indexMeds();
 };
 
 const onChangePassword = function(e){

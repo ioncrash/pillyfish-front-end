@@ -25,6 +25,9 @@
                 <ul class="dropdown-menu">
                   <!-- launch modal -->
                   <li><a ><button type="button" class="btn btn-primary btn-lg" id="show-meds-btn">Show meds!</button></a></li>
+                  <li><a ><button type="button" class="btn create-med-btn btn-primary btn-lg" data-toggle="modal" data-target="#create-med-modal">
+                    Create a med!
+                  </button></a></li>
                 </ul>
               </li>
               <li class="auth-dropdown dropdown">
@@ -52,6 +55,35 @@
         <table class="meds-table hidden">
         </table>
       </div>
+
+      <div class="modal fade" id="create-med-modal" tabindex="-1" role="dialog" aria-labelledby="create-med-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Create a med</h4>
+          </div>
+          <div class="modal-body">
+            <form class="sign-up-form">
+              <div class="form-group">
+                <label>Nickname</label>
+                <input type="text" class="form-control" name="nickname" id="create-med-nickname" placeholder="What do you call this med?">
+              </div>
+              <div class="form-group">
+                <label>Clinical Name</label>
+                <input type="text" class="form-control" id="create-med-clinical_name" name="clinical_name" placeholder="What does your phamacist call it?">
+              </div>
+              <div class="form-group">
+                <label>Count</label>
+                <input type="text" class="form-control" id="create-med-count" name="count" placeholder="How many do you have?">
+              </div>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
         <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="sign-up-modal">
         <div class="modal-dialog" role="document">

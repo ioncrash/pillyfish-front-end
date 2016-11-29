@@ -1,6 +1,6 @@
 {{#each meds as |med|}}
 
-  <tr><th>Nickname</th><th>Clinical Name</th><th>How many you have</th></tr>
-  <tr><td>{{med.nickname}}</td> <td>{{med.clinical_name}}</td>       <td>{{med.count}}</td></tr>
+  <tr><th>Nickname</th><th>Clinical Name</th><th>How many you have</th><th>User ID</th>
+  <tr><td>{{med.nickname}}</td> <td>{{med.clinical_name}}</td>       <td>{{med.count}}</td></td><td>{{med.user.id}}</td></tr>
 
 {{/each}}

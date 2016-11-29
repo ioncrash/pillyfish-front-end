@@ -12,7 +12,7 @@ const signInSuccess = (data) => {
     // change dropdown buttons
     $('.sign-in-btn').hide();
     $('.sign-up-btn').hide();
-    $('.dropdown-toggle').text(store.user.email)
+    $('.dropdown-toggle').text(store.user.email);
     $('.change-pw-btn').removeClass('hidden');
     $('#sign-out-btn').removeClass('hidden');
     $('.change-pw-btn').show();
@@ -45,7 +45,7 @@ const signOutSuccess = (data) => {
   $('#sign-out-btn').hide();
   $('.sign-in-btn').show();
   $('.sign-up-btn').show();
-  $('.dropdown-toggle').text("Sign up/Sign in")
+  $('.dropdown-toggle').text("Sign up/Sign in");
   success(data);
 };
 

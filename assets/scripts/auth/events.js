@@ -3,7 +3,7 @@
 const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
-const meds = require('../meds/events.js')
+const meds = require('../meds/events.js');
 
 const onSignUp = function(e){
  e.preventDefault();

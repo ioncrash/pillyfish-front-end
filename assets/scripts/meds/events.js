@@ -10,6 +10,11 @@ const indexMeds = () => {
   $('.meds-table').removeClass('hidden');
 };
 
+const addMedHandlers = () => {
+  $('#show-meds-btn').on('click', indexMeds);
+};
+
 module.exports = {
-  indexMeds,
+  addMedHandlers,
+  // indexMeds,
 };

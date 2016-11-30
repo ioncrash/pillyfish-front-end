@@ -4,10 +4,10 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
 
-const onMedClick = function(e) {
-  e.preventDefault();
-  console.log('poop');
-};
+// const onMedClick = function(e) {
+//   e.preventDefault();
+//   console.log('poop');
+// };
 
 const indexMeds = function(e) {
   e.preventDefault();
@@ -15,6 +15,15 @@ const indexMeds = function(e) {
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
   $('.med-row').on('click', onMedClick);
+};
+
+const onMedClick = function(e) {
+  e.preventDefault();
+  let data = getFormFields(this);
+  data.med.id = $(this).data().medId;
+  api.update(data).then(changeMedSuccess).catch(failure);
+  $('#create-med-modal').modal('hide');
+  indexMeds(e);
 };
 
 const createMed = function(e) {
@@ -35,5 +44,5 @@ const addMedHandlers = () => {
 module.exports = {
   addMedHandlers,
   onMedClick,
-  // indexMeds,
+  indexMeds,
 };

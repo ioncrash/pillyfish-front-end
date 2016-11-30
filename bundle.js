@@ -215,7 +215,7 @@ webpackJsonp([0],[
 	'use strict';
 
 	module.exports = {
-	  host: 'http://localhost:4741/'
+	  host: 'https://peaceful-wave-15988.herokuapp.com/'
 	};
 
 /***/ },

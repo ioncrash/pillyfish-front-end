@@ -1,10 +1,12 @@
 'use strict';
 
 const indexMedsTemplate = require('../templates/index-meds.handlebars');
+const getFormFields = require('../../../lib/get-form-fields');
 
 const onMedClick = function(e) {
   e.preventDefault();
-  console.log('click!');
+  let data = getFormFields(this);
+  debugger;
 };
 
 const indexMedsSuccess = (meds) => {

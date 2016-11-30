@@ -4,12 +4,12 @@ const indexMedsTemplate = require('../templates/index-meds.handlebars');
 
 const onMedClick = function(e) {
   e.preventDefault();
-  console.log('poop');
+  console.log('click!');
 };
 
 const indexMedsSuccess = (meds) => {
   $('.med-grid').html(indexMedsTemplate(meds));
-  $('.med-row').on('click', onMedClick);
+  $('.change-med-form').on('submit', onMedClick);
 };
 
 const failure = (error) => {

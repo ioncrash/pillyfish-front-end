@@ -26,7 +26,7 @@ const create = function(data) {
 
 const update = function(data) {
   return $.ajax({
-    url: app.host + 'meds/' + currentGame.current.game.id,
+    url: app.host + 'meds/' + data.med.id,
     method: 'PATCH',
     data,
     headers: {
@@ -37,5 +37,6 @@ const update = function(data) {
 
 module.exports = {
   index,
-  create
+  create,
+  update,
 };

@@ -14,7 +14,7 @@ const indexMeds = function(e) {
   api.index()
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
-  $('.med-row').on('click', onMedClick);
+  // $('.med-row').on('click', onMedClick);
 };
 
 const createMed = function(e) {

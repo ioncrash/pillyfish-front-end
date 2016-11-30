@@ -1,8 +1,37 @@
 {{#each meds as |med|}}
 
-<div class="row">
+<div class="row" data-toggle="modal" data-target="#med-"{{med.id}}"-modal">
   <div class="col-xs-12 col-sm-6 med-row">{{med.nickname}}</div>
-  <div class="col-xs-12 col-sm-6 med-row">{{med.count}}</div>
+  <div class="col-xs-12 col-sm-6 med-row" >{{med.count}}</div>
+</div>
+
+<div class="modal fade" id="med-"{{med.id}}"-modal" tabindex="-1" role="dialog" aria-labelledby="med-"{{med.id}}"-modal">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <h4 class="modal-title">Change med: {{med.nickname}}</h4>
+    </div>
+    <div class="modal-body">
+      <form class="change-med-form">
+        <div class="form-group">
+          <label for="med-nickname">Nickname</label>
+          <input type="text" class="form-control" name="med[nickname]" id="change-med-nickname" placeholder="What do you call this med?">
+        </div>
+        <div class="form-group">
+          <label for="change-med-clinical-name">Clinical Name</label>
+          <input type="text" class="form-control" id="create-med-clinical_name" name="med[clinical_name]" placeholder="What does your phamacist call it?">
+        </div>
+        <div class="form-group">
+          <label for="change-med-count">Count</label>
+          <input type="text" class="form-control" id="create-med-count" name="med[count]" placeholder="How many do you have?">
+        </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
 </div>
 
 {{/each}}

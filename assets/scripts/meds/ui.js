@@ -3,7 +3,7 @@
 const indexMedsTemplate = require('../templates/index-meds.handlebars');
 
 const indexMedsSuccess = (meds) => {
-  $('.meds-table').html(indexMedsTemplate(meds));
+  $('.med-grid').html(indexMedsTemplate(meds));
 };
 
 // const clearBooks = () => {

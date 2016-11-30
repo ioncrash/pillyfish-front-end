@@ -1,6 +1,15 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-4">Nickname</div>
+  <div class="col-xs-12 col-sm-4 col-md-2">You have</div>
+  <div class="col-xs-12 col-sm-12 col-md-6">Clinical Name</div>
+</div>
+
 {{#each meds as |med|}}
 
-  <tr><th>Nickname</th><th>Clinical Name</th><th>How many you have</th><th>User ID</th>
-  <tr><td>{{med.nickname}}</td> <td>{{med.clinical_name}}</td>       <td>{{med.count}}</td></td><td>{{med.user.id}}</td></tr>
+<div class="row med-row" data-med-id={{med.id}}>
+  <div class="col-xs-12 col-sm-8 col-md-4">{{med.nickname}}</div>
+  <div class="col-xs-12 col-sm-4 col-md-2">{{med.count}}</div>
+  <div class="col-xs-12 col-sm-4 col-md-6">{{med.clinical_name}}</div>
+</div>
 
 {{/each}}

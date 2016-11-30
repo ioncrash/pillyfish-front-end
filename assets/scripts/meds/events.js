@@ -9,7 +9,6 @@ const indexMeds = function(e) {
   api.index()
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
-  $('.meds-table').removeClass('hidden');
 };
 
 const createMed = function(e) {
@@ -19,7 +18,7 @@ const createMed = function(e) {
   .then(ui.createMedSuccess)
   .catch(ui.failure);
   $('#create-med-modal').modal('hide');
-  indexMeds(e)
+  indexMeds(e);
 };
 
 const addMedHandlers = () => {

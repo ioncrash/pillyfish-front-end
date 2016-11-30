@@ -18,6 +18,7 @@ const createMed = function(e) {
   api.create(data)
   .then(ui.createMedSuccess)
   .catch(ui.failure);
+  $('#create-med-modal').modal('hide');
 };
 
 const addMedHandlers = () => {

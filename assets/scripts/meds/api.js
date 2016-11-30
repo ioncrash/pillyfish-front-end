@@ -24,6 +24,17 @@ const create = function(data) {
   });
 };
 
+const update = function(data) {
+  return $.ajax({
+    url: app.host + 'meds/' + currentGame.current.game.id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Token token=' + store.user.token,
+    }
+  });
+};
+
 module.exports = {
   index,
   create

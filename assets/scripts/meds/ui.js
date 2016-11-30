@@ -6,7 +6,10 @@ const getFormFields = require('../../../lib/get-form-fields');
 const onMedClick = function(e) {
   e.preventDefault();
   let data = getFormFields(this);
+  data.med.id = $(this).data().medId;
   debugger;
+  // api.update(data).then(changeMedSuccess).catch(failure);
+
 };
 
 const indexMedsSuccess = (meds) => {

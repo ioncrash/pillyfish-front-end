@@ -6,10 +6,10 @@
 
 {{#each meds as |med|}}
 
-<div class="row med-row" data-med-id={{med.id}}>
-  <div class="col-xs-12 col-sm-8 col-md-4">{{med.nickname}}</div>
-  <div class="col-xs-12 col-sm-4 col-md-2">{{med.count}}</div>
-  <div class="col-xs-12 col-sm-4 col-md-6">{{med.clinical_name}}</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-4 med-row" data-med-id={{med.id}}>{{med.nickname}}</div>
+  <div class="col-xs-12 col-sm-4 col-md-2 med-row" data-med-id={{med.id}}>{{med.count}}</div>
+  <div class="col-xs-12 col-sm-4 col-md-6 med-row" data-med-id={{med.id}}>{{med.clinical_name}}</div>
 </div>
 
 {{/each}}

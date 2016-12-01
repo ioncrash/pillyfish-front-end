@@ -18,7 +18,6 @@ const indexMeds = function(e) {
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
   $('.change-med-form').on('submit', onMedClick);
-  // $('.med-row').on('click', onMedClick);
 };
 
 const createMed = function(e) {

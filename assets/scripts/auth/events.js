@@ -8,7 +8,10 @@ const meds = require('../meds/events.js');
 const onSignUp = function(e){
  e.preventDefault();
  let data = getFormFields(this);
- api.signUp(data).then(ui.success).catch(ui.failure);
+ let credentials = data;
+ api.signUp(data).then(ui.success).then( () => {
+   api.signIn(credentials).then(ui.signInSuccess);
+ }).catch(ui.failure);
  $('#sign-up-modal').modal('hide');
 };
 

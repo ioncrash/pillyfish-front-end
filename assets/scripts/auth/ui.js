@@ -45,9 +45,10 @@ const changePasswordFailure = (error) => {
 const signOutSuccess = (data) => {
   $('.change-pw-btn').hide();
   $('#sign-out-btn').hide();
+  $('.meds-dropdown').addClass('hidden');
   $('.sign-in-btn').show();
   $('.sign-up-btn').show();
-  $('.dropdown-toggle').text("Sign up/Sign in");
+  $('.auth-dropdown-toggle').text("Sign up/Sign in");
   success(data);
 };
 

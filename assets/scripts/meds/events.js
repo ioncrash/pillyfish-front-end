@@ -15,9 +15,11 @@ const changeMed = function(e) {
   e.preventDefault();
   let data = getFormFields(event.target);
   data.med.id = $(event.target).data().medId;
-  api.update(data).then(ui.changeMedSuccess).catch(ui.failure);
+  api.update(data).then(ui.changeMedSuccess).then(indexMeds).catch(ui.failure);
   $('.change-med-modal').modal('hide');
-  indexMeds(e);
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  setTimeout(indexMeds(e), 5000);
 };
 
 const createMed = function(e) {
@@ -25,9 +27,10 @@ const createMed = function(e) {
   let data = getFormFields(this);
   api.create(data)
   .then(ui.createMedSuccess)
+  .then(indexMeds)
   .catch(ui.failure);
   $('#create-med-modal').modal('hide');
-  indexMeds(e);
+  setTimeout(indexMeds(e), 5000);
 };
 
 const deleteMed = function(e) {
@@ -39,7 +42,7 @@ const deleteMed = function(e) {
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
-  indexMeds(e);
+  setTimeout(indexMeds(e), 5000);
 };
 
 const addMedHandlers = () => {

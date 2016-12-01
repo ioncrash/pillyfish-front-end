@@ -37,7 +37,8 @@ const deleteMed = function(e) {
   e.preventDefault();
   let id = $(this).data().medId;
   api.deleteMed(id)
-  .then(ui.deleteMedSuccess)
+  .then(ui.deleteMedSuccess).then( () => {
+    indexMeds(e);})
   .catch(ui.failure);
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');

@@ -35,8 +35,19 @@ const update = function(data) {
   });
 };
 
+const deleteMed = function(id) {
+  return $.ajax({
+  url: app.host + 'meds/' + id,
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Token token=' + store.user.token,
+  },
+});
+};
+
 module.exports = {
   index,
   create,
   update,
+  deleteMed,
 };

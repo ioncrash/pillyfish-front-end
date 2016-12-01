@@ -15,10 +15,14 @@ const indexMedsSuccess = (meds) => {
   $('.med-grid').html(indexMedsTemplate(meds));
 };
 
+const deleteMedSuccess = () => {
+  console.log('whee!');
+};
 
 
 module.exports = {
   indexMedsSuccess,
   changeMedSuccess,
+  deleteMedSuccess,
   failure,
 };

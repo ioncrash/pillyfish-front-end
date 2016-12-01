@@ -32,7 +32,10 @@ const createMed = function(e) {
 
 const deleteMed = function(e) {
   e.preventDefault();
-  console.log($(this).data().medId);
+  let id = $(this).data().medId;
+  api.deleteMed(id)
+  .then(ui.deleteMedSuccess)
+  .catch(ui.failure);
 };
 
 const addMedHandlers = () => {

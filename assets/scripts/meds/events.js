@@ -30,10 +30,16 @@ const createMed = function(e) {
   indexMeds(e);
 };
 
+const deleteMed = function(e) {
+  e.preventDefault();
+  console.log('clickyclicky');
+};
+
 const addMedHandlers = () => {
   $('#show-meds-btn').on('click', indexMeds);
   $('.create-med-form').on('submit', createMed);
   $('.med-grid').on('submit', 'form', onMedClick);
+  $('.med-grid').on('click', '.delete-btn', deleteMed);
 };
 
 module.exports = {

@@ -32,7 +32,7 @@ const createMed = function(e) {
 
 const deleteMed = function(e) {
   e.preventDefault();
-  console.log('clickyclicky');
+  console.log($(this).data().medId);
 };
 
 const addMedHandlers = () => {

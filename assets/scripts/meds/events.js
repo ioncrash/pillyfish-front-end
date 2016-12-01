@@ -4,26 +4,20 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
 
-// const onMedClick = function(e) {
-//   e.preventDefault();
-//   console.log('poop');
-// };
+const onMedClick = function(e) {
+  e.preventDefault();
+  let data = getFormFields(event.target);
+  data.med.id = $(event.target).data().medId;
+  api.update(data).then(ui.changeMedSuccess).catch(ui.failure);
+  $('.change-med-modal').modal('hide');
+};
 
 const indexMeds = function(e) {
   e.preventDefault();
   api.index()
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
-  $('.med-row').on('click', onMedClick);
-};
-
-const onMedClick = function(e) {
-  e.preventDefault();
-  let data = getFormFields(this);
-  data.med.id = $(this).data().medId;
-  api.update(data).then(changeMedSuccess).catch(failure);
-  $('#create-med-modal').modal('hide');
-  indexMeds(e);
+  $('.change-med-form').on('submit', onMedClick);
 };
 
 const createMed = function(e) {
@@ -36,13 +30,26 @@ const createMed = function(e) {
   indexMeds(e);
 };
 
+const deleteMed = function(e) {
+  e.preventDefault();
+  let id = $(this).data().medId;
+  api.deleteMed(id)
+  .then(ui.deleteMedSuccess)
+  .catch(ui.failure);
+  $('.change-med-modal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  indexMeds(e);
+};
+
 const addMedHandlers = () => {
   $('#show-meds-btn').on('click', indexMeds);
   $('.create-med-form').on('submit', createMed);
+  $('.med-grid').on('submit', 'form', onMedClick);
+  $('.med-grid').on('click', '.delete-btn', deleteMed);
 };
 
 module.exports = {
   addMedHandlers,
-  onMedClick,
   indexMeds,
 };

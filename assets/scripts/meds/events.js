@@ -39,5 +39,4 @@ const addMedHandlers = () => {
 module.exports = {
   addMedHandlers,
   indexMeds,
-  // onMedClick
 };

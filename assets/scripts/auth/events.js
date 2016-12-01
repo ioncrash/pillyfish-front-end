@@ -32,6 +32,7 @@ const onSignOut = function(e){
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure);
+  $('.med-grid').html('');
 };
 
 const addAuthHandlers = () => {

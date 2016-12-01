@@ -27,11 +27,10 @@ const createMed = function(e) {
   e.preventDefault();
   let data = getFormFields(this);
   api.create(data)
-  .then(ui.createMedSuccess)
-  .then(indexMeds)
+  .then(ui.createMedSuccess).then( () => {
+    indexMeds(e);})
   .catch(ui.failure);
   $('#create-med-modal').modal('hide');
-  setTimeout(indexMeds(e), 5000);
 };
 
 const deleteMed = function(e) {

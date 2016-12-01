@@ -6,8 +6,8 @@ const ui = require('./ui.js');
 
 const onMedClick = function(e) {
   e.preventDefault();
-  let data = getFormFields(this);
-  data.med.id = $(this).data().medId;
+  let data = getFormFields(event.target);
+  data.med.id = $(event.target).data().medId;
   api.update(data).then(ui.changeMedSuccess).catch(ui.failure);
   $('.change-med-modal').modal('hide');
 };
@@ -34,7 +34,7 @@ const createMed = function(e) {
 const addMedHandlers = () => {
   $('#show-meds-btn').on('click', indexMeds);
   $('.create-med-form').on('submit', createMed);
-  // $('.med-grid').find('form').on('submit', onMedClick);
+  $('.med-grid').on('submit', 'form', onMedClick);
 };
 
 module.exports = {

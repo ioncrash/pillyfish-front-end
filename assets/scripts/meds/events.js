@@ -6,7 +6,10 @@ const ui = require('./ui.js');
 
 const onMedClick = function(e) {
   e.preventDefault();
-  console.log('poop');
+  let data = getFormFields(this);
+  data.med.id = $(this).data().medId;
+  api.update(data).then(ui.changeMedSuccess).catch(ui.failure);
+  $('.change-med-modal').modal('hide');
 };
 
 const indexMeds = function(e) {
@@ -14,6 +17,7 @@ const indexMeds = function(e) {
   api.index()
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
+  $('.change-med-form').on('submit', onMedClick);
   // $('.med-row').on('click', onMedClick);
 };
 
@@ -30,10 +34,11 @@ const createMed = function(e) {
 const addMedHandlers = () => {
   $('#show-meds-btn').on('click', indexMeds);
   $('.create-med-form').on('submit', createMed);
+  // $('.med-grid').find('form').on('submit', onMedClick);
 };
 
 module.exports = {
   addMedHandlers,
-  onMedClick,
-  // indexMeds,
+  indexMeds,
+  // onMedClick
 };

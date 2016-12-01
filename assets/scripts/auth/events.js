@@ -9,9 +9,8 @@ const onSignUp = function(e){
  e.preventDefault();
  let data = getFormFields(this);
  let credentials = data;
- api.signUp(data).then(ui.success).then( () => {
-   api.signIn(credentials).then(ui.signInSuccess);
- }).catch(ui.failure);
+ api.signUp(data).then(ui.success).then(api.signIn(credentials)
+  .then(ui.signInSuccess)).catch(ui.failure);
  $('#sign-up-modal').modal('hide');
 };
 

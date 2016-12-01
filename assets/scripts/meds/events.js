@@ -15,11 +15,12 @@ const changeMed = function(e) {
   e.preventDefault();
   let data = getFormFields(event.target);
   data.med.id = $(event.target).data().medId;
-  api.update(data).then(ui.changeMedSuccess).then(indexMeds).catch(ui.failure);
+  api.update(data).then(ui.changeMedSuccess).then( () => {
+    indexMeds(e);})
+    .catch(ui.failure);
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
-  setTimeout(indexMeds(e), 5000);
 };
 
 const createMed = function(e) {

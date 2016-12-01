@@ -36,6 +36,10 @@ const deleteMed = function(e) {
   api.deleteMed(id)
   .then(ui.deleteMedSuccess)
   .catch(ui.failure);
+  $('.change-med-modal').modal('hide');
+  $('body').removeClass('modal-open');
+  $('.modal-backdrop').remove();
+  indexMeds(e);
 };
 
 const addMedHandlers = () => {

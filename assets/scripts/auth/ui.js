@@ -15,8 +15,8 @@ const signInSuccess = (data) => {
     $('.auth-dropdown-toggle').text(store.user.email);
     $('.change-pw-btn').removeClass('hidden');
     $('#sign-out-btn').removeClass('hidden');
-    $('.meds-dropdown').removeClass('hidden');
-    $('.meds-dropdown').show();
+    $('.create-med-btn').removeClass('hidden');
+    $('#header').removeClass('hidden');
     $('.change-pw-btn').show();
     $('#sign-out-btn').show();
     $('#sign-in-modal').modal('hide');
@@ -45,9 +45,11 @@ const changePasswordFailure = (error) => {
 const signOutSuccess = (data) => {
   $('.change-pw-btn').hide();
   $('#sign-out-btn').hide();
+  $('.create-med-btn').addClass('hidden');
   $('.sign-in-btn').show();
   $('.sign-up-btn').show();
-  $('.dropdown-toggle').text("Sign up/Sign in");
+  $('.auth-dropdown-toggle').text("Sign up/Sign in");
+  $('#header').addClass('hidden');
   success(data);
 };
 

@@ -8,15 +8,18 @@ const meds = require('../meds/events.js');
 const onSignUp = function(e){
  e.preventDefault();
  let data = getFormFields(this);
- api.signUp(data).then(ui.success).catch(ui.failure);
+ let credentials = data;
+ api.signUp(data).then(ui.success).then(api.signIn(credentials)
+  .then(ui.signInSuccess)).catch(ui.failure);
  $('#sign-up-modal').modal('hide');
 };
 
 const onSignIn = function(e){
   e.preventDefault();
   let data = getFormFields(this);
-  api.signIn(data).then(ui.signInSuccess).catch(ui.signInFailure);
-  // meds.indexMeds();
+  api.signIn(data).then(ui.signInSuccess).then( () => {
+    meds.indexMeds(e);})
+    .catch(ui.signInFailure);
 };
 
 const onChangePassword = function(e){
@@ -32,6 +35,7 @@ const onSignOut = function(e){
   api.signOut()
     .then(ui.signOutSuccess)
     .catch(ui.failure);
+  $('.med-grid').html('');
 };
 
 const addAuthHandlers = () => {

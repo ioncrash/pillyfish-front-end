@@ -10,6 +10,15 @@ $contrast: $white;
   background-color: $backdrop;
 }
 
+.create-med-btn {
+  display: block;
+  float: right;
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    display: none;
+  }
+}
+
 .dropdown {
   background-color: $backdrop;
   font-size: 50px;
@@ -54,14 +63,6 @@ $contrast: $white;
   margin: 0;
 }
 
-.mobile-head {
-  display: none;
-
-  @media screen and (min-width: 0px) and (max-width: 767px) {
-    display: block;
-  }
-}
-
 .navbar {
   @media (min-width: 768px) {
     border-bottom: .5px solid $contrast;
@@ -77,7 +78,7 @@ $contrast: $white;
 .row {
   background-color: $main-color;
   border-radius: 25px;
-  font-size: 30px;
+  font-size: 25px;
   height: 80px;
   margin-bottom: 4px;
 }

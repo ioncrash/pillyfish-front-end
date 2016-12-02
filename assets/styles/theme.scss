@@ -1,17 +1,29 @@
 $main-color: $pillyfish-purple;
-$font-color: $black;
-$font-color2: $white;
-// $quote-background-color: $light-gray;
-// // $aquote-size: $quote-size;
-// // $p-height: $line-height;
-// // //
+$backdrop: $black;
+$contrast: $white;
+
+.auth-dropdown {
+  background-color: $backdrop;
+  font-size: 50px;
+  height: 100px;
+  padding-top: 22px;
+
+  @media (max-width: 767px) {
+    border-bottom: .5px solid $contrast;
+    border-top: 1px solid $contrast;
+  }
+}
 
 .container {
   padding: 0;
 }
 
 .container-fluid {
-  background-color: $black;
+  background-color: $backdrop;
+}
+
+.dropdown-menu {
+  background-color: $backdrop;
 }
 
 .med-grid {
@@ -21,10 +33,15 @@ $font-color2: $white;
   margin: 0;
 }
 
+.navbar {
+  @media (min-width: 768px) {
+    border-bottom: .5px solid $contrast;
+  }
+}
+
 .navbar-brand {
   font-size: 55px;
   padding-top: 38px;
-
 }
 
 .row {

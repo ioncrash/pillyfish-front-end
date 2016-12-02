@@ -16,6 +16,7 @@ const signInSuccess = (data) => {
     $('.change-pw-btn').removeClass('hidden');
     $('#sign-out-btn').removeClass('hidden');
     $('.create-med-btn').removeClass('hidden');
+    $('#header').removeClass('hidden');
     $('.change-pw-btn').show();
     $('#sign-out-btn').show();
     $('#sign-in-modal').modal('hide');
@@ -48,6 +49,7 @@ const signOutSuccess = (data) => {
   $('.sign-in-btn').show();
   $('.sign-up-btn').show();
   $('.auth-dropdown-toggle').text("Sign up/Sign in");
+  $('#header').addClass('hidden');
   success(data);
 };
 

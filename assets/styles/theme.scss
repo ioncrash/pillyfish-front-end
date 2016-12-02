@@ -15,7 +15,6 @@ $contrast: $white;
   font-size: 50px;
   height: 100px;
   padding-top: 22px;
-  position: relative;
 
   @media (max-width: 767px) {
     border-bottom: .5px solid $contrast;
@@ -31,14 +30,16 @@ $contrast: $white;
   background-color: $backdrop;
   border-bottom: .5px solid $contrast;
   border-left: .5px solid $contrast;
+  display: none;
   opacity: 1;
   width: 394.7px;
-  z-index: 1;
 
   li a:hover {
     background-color: $main-color;
   }
 }
+
+
 
 .logo {
   position: absolute;
@@ -65,6 +66,12 @@ $contrast: $white;
 
 .row {
   height: 80px;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .open .dropdown-menu {
+    background-color: $backdrop;
+  }
 }
 
 // .a {

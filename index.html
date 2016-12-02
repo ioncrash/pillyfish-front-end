@@ -15,7 +15,7 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
             </button>
-            <a href="#" class="navbar-left"><img src="http://i.imgur.com/jNAI2Nf.jpg" height="100px"></a><a class="navbar-brand" href="#">Pillyfish</a>
+            <a id="logo" href="#" class="navbar-left"><img src="http://i.imgur.com/jNAI2Nf.jpg" height="100px"></a><a class="navbar-brand" href="#">Pillyfish</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,16 +34,16 @@
                 <a href="#" class="auth-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign up/Sign in <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <!-- launch modal -->
-                  <li><a ><button type="button" class="btn sign-up-btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
+                  <li><a ><div class="dropdown-item" data-toggle="modal" data-target="#sign-up-modal">
                     Sign up!
-                  </button></a></li>
-                  <li><a ><button type="button" class="btn btn-primary sign-in-btn btn-lg" data-toggle="modal" data-target="#sign-in-modal">
+                  </div></a></li>
+                  <li><a ><div class="dropdown-item" data-toggle="modal" data-target="#sign-in-modal">
                     Sign in!
-                  </button></a></li>
-                  <li><a ><button type="button" class="btn btn-primary btn-lg change-pw-btn hidden" data-toggle="modal" data-target="#change-password-modal">
+                  </div></a></li>
+                  <li><a ><div class="dropdown-item" data-toggle="modal" data-target="#change-password-modal">
                     Change password
-                  </button></a></li>
-                  <li><a ><button type="button" class="btn btn-primary btn-lg hidden" id="sign-out-btn">Sign out!</button></a></li>
+                  </div></a></li>
+                  <li><a ><div class="dropdown-item"id="sign-out-btn">Sign out!</div></a></li>
                 </ul>
               </li>
             </ul>

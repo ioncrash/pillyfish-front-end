@@ -43,11 +43,9 @@ const deleteMed = function(e) {
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();
-  setTimeout(indexMeds(e), 5000);
 };
 
 const addMedHandlers = () => {
-  $('#show-meds-btn').on('click', indexMeds);
   $('.create-med-form').on('submit', createMed);
   $('.med-grid').on('submit', 'form', changeMed);
   $('.med-grid').on('click', '.delete-btn', deleteMed);

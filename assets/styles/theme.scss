@@ -4,6 +4,7 @@ $contrast: $white;
 
 .container {
   padding: 0;
+  margin: 0;
 }
 
 .container-fluid {
@@ -11,8 +12,9 @@ $contrast: $white;
 }
 
 .create-med-btn {
-  display: block;
+  display: absolute;
   float: right;
+  right: 0;
 
   @media screen and (min-width: 0px) and (max-width: 767px) {
     display: none;

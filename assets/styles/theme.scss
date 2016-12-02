@@ -2,10 +2,13 @@ $main-color: $pillyfish-purple;
 $backdrop: $black;
 $contrast: $white;
 
-// .btn {
-//   background-color: black
-//   border: 0;
-// }
+.container {
+  padding: 0;
+}
+
+.container-fluid {
+  background-color: $backdrop;
+}
 
 .dropdown {
   background-color: $backdrop;
@@ -20,12 +23,8 @@ $contrast: $white;
   }
 }
 
-.container {
-  padding: 0;
-}
-
-.container-fluid {
-  background-color: $backdrop;
+.dropdown-item {
+  color: $white;
 }
 
 .dropdown-menu {
@@ -35,6 +34,10 @@ $contrast: $white;
   opacity: 1;
   width: 394.7px;
   z-index: 1;
+
+  li a:hover {
+    background-color: $main-color;
+  }
 }
 
 .logo {

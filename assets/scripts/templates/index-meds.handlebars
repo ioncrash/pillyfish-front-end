@@ -1,7 +1,9 @@
 {{#each meds as |med|}}
 
 <div class="row" data-toggle="modal" data-target="#med-{{med.id}}-modal">
+  <div class="col-xs-12 med-row mobile-head">Nickname</div>
   <div class="col-xs-12 col-sm-6 med-row">{{med.nickname}}</div>
+  <div class="col-xs-12 med-row mobile-head">Count</div>
   <div class="col-xs-12 col-sm-6 med-row">{{med.count}}</div>
 </div>
 

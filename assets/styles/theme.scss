@@ -54,6 +54,14 @@ $contrast: $white;
   margin: 0;
 }
 
+.mobile-head {
+  display: none;
+
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    display: block;
+  }
+}
+
 .navbar {
   @media (min-width: 768px) {
     border-bottom: .5px solid $contrast;

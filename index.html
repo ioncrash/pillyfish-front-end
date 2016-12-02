@@ -20,16 +20,9 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
             <ul class="nav navbar-nav navbar-right" id="navbar-right-side">
-              <li class="meds-dropdown dropdown hidden">
-                <a href="#" class="meds-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Meds<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <!-- launch modal -->
-                  <li><a ><button type="button" class="btn btn-primary btn-lg" id="show-meds-btn">Show meds!</button></a></li>
-                  <li><a ><button type="button" class="btn create-med-btn btn-primary btn-lg" data-toggle="modal" data-target="#create-med-modal">
-                    Create a med!
-                  </button></a></li>
-                </ul>
-              </li>
+              <button type="button" class="btn create-med-btn btn-primary btn-lg hidden" data-toggle="modal" data-target="#create-med-modal">
+                Create a med!
+              </button>
               <li class="auth-dropdown dropdown">
                 <a href="#" class="auth-dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sign up/Sign in <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -40,10 +33,10 @@
                   <li><a ><div class="dropdown-item" data-toggle="modal" data-target="#sign-in-modal">
                     Sign in!
                   </div></a></li>
-                  <li><a ><div class="dropdown-item" data-toggle="modal" data-target="#change-password-modal">
+                  <li><a ><div class="dropdown-item change-pw-btn hidden" data-toggle="modal" data-target="#change-password-modal">
                     Change password
                   </div></a></li>
-                  <li><a ><div class="dropdown-item"id="sign-out-btn">Sign out!</div></a></li>
+                  <li><a ><div class="dropdown-item hidden"id="sign-out-btn">Sign out!</div></a></li>
                 </ul>
               </li>
             </ul>

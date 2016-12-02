@@ -39,10 +39,11 @@ $contrast: $white;
   }
 }
 
-.header {
-  color: $white;
+#header {
+  background-color: $black;
+  color: $charcoal;
+  font-size: 30px;
   height: 80px;
-  margin: -15px;
 }
 
 .logo {
@@ -68,6 +69,7 @@ $contrast: $white;
 .row {
   background-color: $main-color;
   border-radius: 25px;
+  font-size: 30px;
   height: 80px;
   margin-bottom: 4px;
 }

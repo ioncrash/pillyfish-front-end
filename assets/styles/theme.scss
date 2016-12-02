@@ -1,20 +1,36 @@
-// $background-color: $paper-white;
-// $font-color: $charcoal;
+$main-color: $pillyfish-purple;
+$font-color: $black;
+$font-color2: $white;
 // $quote-background-color: $light-gray;
-// $aquote-size: $quote-size;
-// $p-height: $line-height;
-//
-// body {
-//   background-color: $background-color;
+// // $aquote-size: $quote-size;
+// // $p-height: $line-height;
+// // //
+
+.container {
+  padding: 0;
+}
+
+.med-grid {
+  background-color: $main-color;
+  height: 500px;
+  margin: 0;
+}
+
+.nav-bar a {
+  background-color: $font-color2;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  height: 80px;
+}
+
+// .a {
 //   color: $font-color;
-//   font-size: 14pt;
-//   line-height: $p-height;
-//   .quote {
-//     font-weight: bold;
-//   }
 // }
 //
-// .quote {
-//   background-color: tint($quote-background-color, 20%);// gray
-//   font-size: $aquote-size * 1.5;
+// .navbar * {
+//   background-color: $main-color;
+//   border-color: $main-color;
 // }

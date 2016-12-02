@@ -46,9 +46,6 @@ $contrast: $white;
 }
 
 .med-grid {
-  background-color: $main-color;
-  border-radius: 50px;
-  height: 500px;
   margin: 0;
 }
 
@@ -65,7 +62,10 @@ $contrast: $white;
 }
 
 .row {
+  background-color: $main-color;
+  border-radius: 25px;
   height: 80px;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 767px) {

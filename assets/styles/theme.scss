@@ -39,7 +39,11 @@ $contrast: $white;
   }
 }
 
-
+.header {
+  color: $white;
+  height: 80px;
+  margin: -15px;
+}
 
 .logo {
   position: absolute;
@@ -73,12 +77,3 @@ $contrast: $white;
     background-color: $backdrop;
   }
 }
-
-// .a {
-//   color: $font-color;
-// }
-//
-// .navbar * {
-//   background-color: $main-color;
-//   border-color: $main-color;
-// }

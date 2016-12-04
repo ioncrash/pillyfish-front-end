@@ -11,7 +11,9 @@ $contrast: $white;
 }
 
 .create-med-btn {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
 
   @media screen and (min-width: 0px) and (max-width: 767px) {
     display: none;
@@ -76,6 +78,7 @@ $contrast: $white;
 
 .new-med {
   font-size: 20px;
+  overflow: visible;
   text-align: right;
 }
 

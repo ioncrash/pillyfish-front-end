@@ -3,7 +3,7 @@ Welcome to Pillyfish!
 This app came to me as a result of making my girlfriend mad one time. I was helping her put together her medications for the day and forgot to tell her that she was running out of something. So I thought, it would be great to have a cute, psychedelic jellyfish-themed application to keep track of your medications for you!
 
 The working app: https://ioncrash.github.io/pillyfish-front-end/
-
+The deployed back-end: https://peaceful-wave-15988.herokuapp.com/
 The back end repo: https://github.com/ioncrash/Pillyfish-back-end
 
 In making the app, I started by building a basic bootstrap framework, then scaffolded a simple one-to-many relationship in my back end. After that, I tried to walk through each feature from front to back, making each request from the front end, accepting and responding to it in the back end, then rendering the results in the front again.

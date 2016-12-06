@@ -4,8 +4,7 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api.js');
 const ui = require('./ui.js');
 
-const indexMeds = function(e) {
-  e.preventDefault();
+const indexMeds = function() {
   api.index()
   .then(ui.indexMedsSuccess)
     .catch(ui.failure);
@@ -15,8 +14,9 @@ const changeMed = function(e) {
   e.preventDefault();
   let data = getFormFields(event.target);
   data.med.id = $(event.target).data().medId;
-  api.update(data).then(ui.changeMedSuccess).then( () => {
-    indexMeds(e);})
+  api.update(data)
+    .then(ui.changeMedSuccess)
+    .then(indexMeds)
     .catch(ui.failure);
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');
@@ -37,9 +37,9 @@ const deleteMed = function(e) {
   e.preventDefault();
   let id = $(this).data().medId;
   api.deleteMed(id)
-  .then(ui.deleteMedSuccess).then( () => {
-    indexMeds(e);})
-  .catch(ui.failure);
+    .then(ui.deleteMedSuccess)
+    .then(indexMeds)
+    .catch(ui.failure);
   $('.change-med-modal').modal('hide');
   $('body').removeClass('modal-open');
   $('.modal-backdrop').remove();

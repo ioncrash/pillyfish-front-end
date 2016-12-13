@@ -36,6 +36,7 @@ const signInFailure = (error) => {
 
 const changePasswordSuccess = () => {
   $('#change-password-modal').modal('hide');
+  $('#change-password-modal input').val('');
 };
 
 const changePasswordFailure = (error) => {

@@ -20,6 +20,7 @@ const signInSuccess = (data) => {
     $('.change-pw-btn').show();
     $('#sign-out-btn').show();
     $('#sign-in-modal').modal('hide');
+    $('#sign-in-modal input').val('');
     success(data);
 };
 

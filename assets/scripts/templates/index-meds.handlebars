@@ -16,15 +16,15 @@
       <form class="change-med-form" data-med-id="{{med.id}}">
         <div class="form-group">
           <label for="med-nickname">Nickname</label>
-          <input type="text" class="form-control" name="med[nickname]" id="change-med-nickname" placeholder="What do you call this med?">
+          <input type="text" class="form-control" name="med[nickname]" id="change-med-nickname" placeholder="What do you call this med?" value="{{med.nickname}}">
         </div>
         <div class="form-group">
           <label for="change-med-clinical-name">Clinical Name</label>
-          <input type="text" class="form-control" id="create-med-clinical_name" name="med[clinical_name]" placeholder="What does your phamacist call it?">
+          <input type="text" class="form-control" id="create-med-clinical_name" name="med[clinical_name]" placeholder="What does your phamacist call it?" value="{{med.clinical_name}}">
         </div>
         <div class="form-group">
           <label for="change-med-count">Count</label>
-          <input type="text" class="form-control" id="create-med-count" name="med[count]" placeholder="How many do you have?">
+          <input type="text" class="form-control" id="create-med-count" name="med[count]" placeholder="How many do you have?" value="{{med.count}}">
         </div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-default">Submit</input>
